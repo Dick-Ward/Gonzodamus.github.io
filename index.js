@@ -27,7 +27,7 @@ const checkBirthday = () =>{
     if (date.getMonth() === 0 && date.getDate() === 18){
         return "YES!  Happy birthday Joey!"
     } else {
-        return `Nope! But only ${days_left} to go!`
+        return `Nope! But only ${minutes_left} minutes to go until the next one!`
     }
 }
 

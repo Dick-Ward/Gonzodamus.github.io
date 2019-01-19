@@ -17,8 +17,10 @@ let years = days * 365
 displayDays = Math.round(time / years)
 days_left = (Math.round((targetDate.getTime() - date.getTime())/days))
 minutes_left = (Math.round((targetDate.getTime() - date.getTime())/minutes))
-seconds_left = (Math.round((targetDate.getTime() - date.getTime())/time))
-console.log(days_left)
+seconds_left = (Math.round((targetDate.getTime() - date.getTime())))
+console.log(seconds_left)
+
+
 
 
 
@@ -26,20 +28,17 @@ const checkBirthday = () =>{
     if (date.getMonth() === 0 && date.getDate() === 18){
         return "YES!  Happy birthday Joey!"
     } else {
-        return `Nope! But only ${minutes_left} minutes to go until the next one!`
+        return `Nope! But only ${seconds_left} seconds to go until the next one!`
     }
 }
 
+const clockCount = () =>{
+  setInterval( () =>{
+    seconds_left--
+        if (date.getMonth() !== 0 || date.getDate() !== 18){
+          countdown.innerHTML = `Nope! But only ${seconds_left} seconds to go until the next one!`
+        }
+  }, 1000)
+}
 countdown.innerHTML = checkBirthday()
-
-
-
-// console.log(days_left)
-// const clockCount = () =>{
-//     setInterval( () =>{
-//         time--
-//         countdown.innerHTML = displayDays
-//     }, 1000)
-// }
-// clockCount()
-
+clockCount()

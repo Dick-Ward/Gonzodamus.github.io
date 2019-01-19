@@ -9,7 +9,6 @@ const birthday = false
 let date = new Date()
 
 
-console.log(date.getMonth() === 0 && date.getDate() === 18)
 let time = date.getTime()
 let minutes = 1000 * 60;
 let hours = minutes * 60;

@@ -17,7 +17,7 @@ let years = days * 365
 displayDays = Math.round(time / years)
 days_left = (Math.round((targetDate.getTime() - date.getTime())/days))
 minutes_left = (Math.round((targetDate.getTime() - date.getTime())/minutes))
-seconds_left = (Math.round((targetDate.getTime() - date.getTime())))
+seconds_left = (Math.round((targetDate.getTime() - date.getTime())/1000))
 console.log(seconds_left)
 
 
